@@ -1,92 +1,31 @@
 //Cludeo Answer Generator
 console.log('I know who the murderer was!');
 
-//Random Person Generator
-let randomNumberForPerson = Math.floor(Math.random()*5);
-let person = '';
+//Data
+const people = ['Mrs Peacock', 'Colonel Mustard', 'Professor Plum', 'Miss Scarlet', 'Mr Green'];
+const weapons = ['Revolver', 'Dagger', 'Lead Pipe', 'Rope', 'Candlestick', 'Wrench'];
+const locations = ['Kitchen', 'Hall', 'Ballroom', 'Conservatory', 'Dining Room', 'Cellar', 'Billiards Room', 'Library', 'Lounge', 'Study'];
 
-switch(randomNumberForPerson){
-    case 0:
-        person = 'Mrs Peacock';
-        break;
-    case 1:
-        person = 'Colonel Mustard';
-        break;
-    case 2:
-        person = 'Professor Plum';
-        break;
-    case 3:
-        person = 'Miss Scarlet';
-        break;
-    case 4:
-        person = 'Mr Green';
-        break;
+//Random Number Generators
+let random5 = Math.floor(Math.random()*5);
+let random6 = Math.floor(Math.random()*6);
+let random10 = Math.floor(Math.random()*10);
+
+//function for Person
+const randPerson = () => {
+    console.log('It was ' + people[random5] + ',');
 }
+randPerson(random5);
 
-console.log(`It was ${person},`);
-
-//Random Weapon Generator
-let randomNumberForWeapon = Math.floor(Math.random()*6);
-let weapon = '';
-
-switch(randomNumberForWeapon){
-    case 0:
-        weapon = 'Revolver';
-        break;
-    case 1:
-        weapon = 'Dagger';
-        break;
-    case 2:
-        weapon = 'Lead Pipe';
-        break;
-    case 3:
-        weapon = 'Rope';
-        break;
-    case 4:
-        weapon = 'Candlestick';
-        break;
-    case 5:
-        weapon = 'Wrench';
-        break;
+//function for Weapon
+const randWeapon = () => {
+    console.log('with the ' + weapons[random6] + ',');
 }
+randWeapon(random6);
 
-console.log(`with the ${weapon},`);
-
-//Random Location Generator
-let randomNumberForLocation = Math.floor(Math.random()*10);
-let location = '';
-
-switch(randomNumberForLocation){
-    case 0:
-        location = 'Kitchen';
-        break;
-    case 1:
-        location = 'Hall';
-        break;
-    case 2:
-        location = 'Ballroom';
-        break;
-    case 3:
-        location = 'Conservatory';
-        break;
-    case 4:
-        location = 'Dining Room';
-        break;
-    case 5:
-        location = 'Cellar';
-        break;
-    case 6:
-        location = 'Billards Room';
-        break;
-    case 7:
-        location = 'Library';
-        break;
-    case 8:
-        location = 'Lounge';
-        break;
-    case 9:
-        location = 'Study';
-        break;
+//function for Location
+const randLocation = () => {
+    console.log('in the ' + locations[random10] + '!');
 }
+randLocation(random10);
 
-console.log(`in the ${location}!`);
